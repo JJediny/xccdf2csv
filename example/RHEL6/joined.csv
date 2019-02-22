@@ -17,7 +17,7 @@ If the autofs service is enabled or running, this is a finding.","If the ""autof
 
 Stop the service if it is already running:
 
-# service autofs stop",CCI-000366,CCI-000366,draft,9/18/2009,DISA FSO,The organization implements the security configuration settings.,policy,4,CM-6 b,3,CM-6 b,1,CM-6.1 (iv)
+# service autofs stop",CCI-000366,CCI-000366,draft,9/18/2009,DISA FSO,The organization implements the security configuration settings....,policy,4,CM-6 b,3,CM-6 b,1,CM-6.1 (iv)
 38438,RHEL-06-000525,Auditing must be enabled at boot by setting a kernel parameter.,SRG-OS-000062,low,"Inspect the kernel boot arguments (which follow the word ""kernel"") in ""/boot/grub/grub.conf"". If they include ""audit=1"", then auditing is enabled at boot time.
 
 If auditing is not enabled at boot time, this is a finding.","To ensure all processes can be audited, even those which start prior to the audit daemon, add the argument ""audit=1"" to the kernel line in ""/boot/grub/grub.conf"", in the manner below:
@@ -2808,7 +2808,7 @@ There should be no output.
 If there is output, this is a finding.","Edit ""/etc/snmp/snmpd.conf"", removing any references to ""v1"", ""v2c"", or ""com2sec"". Upon doing that, restart the SNMP service:
 
 # service snmpd restart",CCI-000366,CCI-000366,draft,9/18/2009,DISA FSO,The organization implements the security configuration settings.,policy,4,CM-6 b,3,CM-6 b,1,CM-6.1 (iv)
-38661,RHEL-06-000276,The operating system must protect the confidentiality and integrity of data at rest. ,SRG-OS-000185,low,"Determine if encryption must be used to protect data on the system.
+38661,RHEL-06-000276,"The operating system must protect the confidentiality and integrity of data at rest. ",SRG-OS-000185,low,"Determine if encryption must be used to protect data on the system.
 If encryption must be used and is not employed, this is a finding.","Red Hat Enterprise Linux 6 natively supports partition encryption through the Linux Unified Key Setup-on-disk-format (LUKS) technology. The easiest way to encrypt a partition is during installation time.
 
 For manual installations, select the ""Encrypt"" checkbox during partition creation to encrypt the partition. When this option is selected the system will prompt for a passphrase to use in decrypting the partition. The passphrase will subsequently need to be entered manually every time the system boots.
@@ -2907,7 +2907,7 @@ If the service is not enabled, this is a finding.","The Postfix mail transfer ag
 
 # chkconfig postfix on
 # service postfix start",CCI-000366,CCI-000366,draft,9/18/2009,DISA FSO,The organization implements the security configuration settings.,policy,4,CM-6 b,3,CM-6 b,1,CM-6.1 (iv)
-38670,RHEL-06-000306,The operating system must detect unauthorized changes to software and information. ,SRG-OS-000202,medium,"To determine that periodic AIDE execution has been scheduled, run the following command:
+38670,RHEL-06-000306,"The operating system must detect unauthorized changes to software and information. ",SRG-OS-000202,medium,"To determine that periodic AIDE execution has been scheduled, run the following command:
 
 # grep aide /etc/crontab /etc/cron.*/*
 
@@ -3278,7 +3278,7 @@ AIDE can be executed periodically through other means; this is merely one exampl
 
 
 If there is output, this is a finding.","All directories in local partitions which are world-writable should be owned by root or another system account. If any world-writable directories are not owned by a system account, this should be investigated. Following this, the files should be deleted or assigned to an appropriate group.",CCI-000366,CCI-000366,draft,9/18/2009,DISA FSO,The organization implements the security configuration settings.,policy,4,CM-6 b,3,CM-6 b,1,CM-6.1 (iv)
-38700,RHEL-06-000305,The operating system must provide a near real-time alert when any of the organization defined list of compromise or potential compromise indicators occurs. ,SRG-OS-000196,medium,"To determine that periodic AIDE execution has been scheduled, run the following command:
+38700,RHEL-06-000305,"The operating system must provide a near real-time alert when any of the organization defined list of compromise or potential compromise indicators occurs. ",SRG-OS-000196,medium,"To determine that periodic AIDE execution has been scheduled, run the following command:
 
 # grep aide /etc/crontab /etc/cron.*/*
 
